@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LaporanTransaksi" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e6ad089d-dc39-4627-89f7-267238316b5f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from check_in]]>
+	</queryString>
+	<field name="IDCustomer" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IDKaryawan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RoomNumber" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CheckInDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LamaInap" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IDCheckIn" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RoomType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BiayaKamar" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Denda" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TotalBiaya" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CheckOutDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="a90097da-e5f5-4a87-bc11-f3d571cb790d"/>
+				<imageExpression><![CDATA["leaf_banner_red.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="6b4433f2-92e5-4959-824a-5896504ad8ce"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Comic Sans MS" size="20"/>
+				</textElement>
+				<text><![CDATA[Transaction Report ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="166" y="46" width="108" height="22" uuid="54b84ac3-06d1-407c-a194-69746aa85d2c"/>
+				<textElement>
+					<font fontName="Segoe Script" size="12"/>
+				</textElement>
+				<text><![CDATA[Kingdom Hotel]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-6" y="35" width="555" height="1" uuid="679de4ef-e049-48b4-9b33-1d69660fa83f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="54" height="15" uuid="57fe05fe-fb01-4d6b-b46c-c7a442928560"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Room No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="54" y="19" width="85" height="15" uuid="b5297a52-07f6-4ad1-9f5c-c1a773c56727"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Check In Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="142" y="19" width="63" height="15" uuid="6de200eb-6496-4a6b-be43-7bbc6b315f6b"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Lama Inap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="203" y="19" width="69" height="15" uuid="b8994054-3b7a-41ad-9314-3341069552fb"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Room Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="275" y="19" width="74" height="15" uuid="db6abb64-407e-4fd9-ae80-3f7276e838a5"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Biaya Kamar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="349" y="19" width="50" height="15" uuid="52288107-f945-4678-8ee1-b48e9882aaf1"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Denda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="399" y="19" width="64" height="15" uuid="d72f4019-b216-4831-8b0d-ddfe765276a1"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total Biaya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="466" y="19" width="107" height="15" uuid="1719fe95-76d4-4eb9-a0de-b2d4ddb73878"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Check Out Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-6" y="15" width="555" height="1" uuid="81a4ee34-b7a5-4de7-b5e0-0d56e6446640"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="54" height="15" uuid="8b785c91-d884-4fb7-bf14-21f155fb75c5"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RoomNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="54" y="0" width="85" height="15" uuid="3cdc7f10-423f-4d43-b6d9-af9708ddec16"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CheckInDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="142" y="0" width="63" height="15" uuid="5711cf30-dcbd-41a5-8f22-123901bb1c71"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LamaInap}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="203" y="0" width="69" height="15" uuid="56159887-1dad-40ff-9375-63cec280738c"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RoomType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="275" y="0" width="74" height="15" uuid="4af4fe83-da2c-4950-8e8a-805303a37a21"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BiayaKamar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="349" y="0" width="50" height="15" uuid="3f60d936-7485-41a3-b12e-00a0b43ba2fc"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Denda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="399" y="0" width="64" height="15" uuid="0b16543f-8c54-47f2-80a7-53da84195383"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TotalBiaya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="466" y="0" width="107" height="15" uuid="e7120553-7e2b-4163-bc49-4575886fc83c"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CheckOutDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="-6" y="3" width="555" height="1" uuid="5ca6625a-640f-43c9-b3e6-84b9466495cb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="e6fdc21c-b75d-4af1-8576-998570df86ad"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="0d2bd140-16ea-4bf6-b541-4e0ad80ffb8f"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="ffc3a309-77d5-49db-afa3-2a97fbcd515f"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
